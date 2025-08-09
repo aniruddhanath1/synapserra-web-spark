@@ -10,9 +10,9 @@ const Index = () => {
           <img 
             src="/lovable-uploads/93703c00-d56c-4f8a-a80e-651da5c94058.png" 
             alt="Synapserra Logo" 
-            className="h-8 w-auto"
+            className="h-12 w-auto"
           />
-          <span className="text-xl font-normal text-foreground">Synapserra Inc.</span>
+          <span className="text-2xl font-semibold text-foreground">Synapserra Inc.</span>
         </div>
         <nav className="flex items-center gap-6">
           <a href="#services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
