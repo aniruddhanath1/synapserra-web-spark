@@ -16,7 +16,7 @@ const Index = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <img 
-                src="/lovable-uploads/93703c00-d56c-4f8a-a80e-651da5c94058.png" 
+                src="/synapserra-web-spark/lovable-uploads/93703c00-d56c-4f8a-a80e-651da5c94058.png" 
                 alt="Synapserra Logo" 
                 className="h-32 w-auto"
               />
@@ -179,14 +179,14 @@ const Index = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="flex items-center gap-3">
               <img 
-                src="/lovable-uploads/93703c00-d56c-4f8a-a80e-651da5c94058.png" 
+                src="/synapserra-web-spark/lovable-uploads/93703c00-d56c-4f8a-a80e-651da5c94058.png" 
                 alt="Synapserra Logo" 
                 className="h-28 w-auto"
               />
               <span className="text-lg font-semibold text-foreground">Synapserra Inc.</span>
             </div>
             <div className="text-sm text-muted-foreground">
-              © 2024 Synapserra Inc. All rights reserved.
+              © {new Date().getFullYear()} Synapserra Inc. All rights reserved.
             </div>
             <div className="flex gap-8">
               <a href="#privacy" className="text-sm text-muted-foreground hover:text-primary transition-colors">
