@@ -95,19 +95,19 @@ const Index = () => {
 
             {/* Technology Icons */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto animate-fade-in-up" style={{animationDelay: "0.6s"}}>
-              <div className="flex flex-col items-center p-4 bg-card/50 backdrop-blur-sm rounded-xl border border-border/30 hover:shadow-soft transition-all duration-300">
+              <div className="flex flex-col items-center p-4 bg-card/50 backdrop-blur-sm rounded-xl border border-border/30 shadow-lg hover:shadow-2xl transition-all duration-300">
                 <Globe className="w-8 h-8 text-primary mb-2" />
                 <span className="text-sm font-medium text-foreground">Web Dev</span>
               </div>
-              <div className="flex flex-col items-center p-4 bg-card/50 backdrop-blur-sm rounded-xl border border-border/30 hover:shadow-soft transition-all duration-300">
+              <div className="flex flex-col items-center p-4 bg-card/50 backdrop-blur-sm rounded-xl border border-border/30 shadow-lg hover:shadow-2xl transition-all duration-300">
                 <Database className="w-8 h-8 text-primary mb-2" />
                 <span className="text-sm font-medium text-foreground">Salesforce</span>
               </div>
-              <div className="flex flex-col items-center p-4 bg-card/50 backdrop-blur-sm rounded-xl border border-border/30 hover:shadow-soft transition-all duration-300">
+              <div className="flex flex-col items-center p-4 bg-card/50 backdrop-blur-sm rounded-xl border border-border/30 shadow-lg hover:shadow-2xl transition-all duration-300">
                 <Server className="w-8 h-8 text-primary mb-2" />
                 <span className="text-sm font-medium text-foreground">Cloud</span>
               </div>
-              <div className="flex flex-col items-center p-4 bg-card/50 backdrop-blur-sm rounded-xl border border-border/30 hover:shadow-soft transition-all duration-300">
+              <div className="flex flex-col items-center p-4 bg-card/50 backdrop-blur-sm rounded-xl border border-border/30 shadow-lg hover:shadow-2xl transition-all duration-300">
                 <Code className="w-8 h-8 text-primary mb-2" />
                 <span className="text-sm font-medium text-foreground">Custom</span>
               </div>
@@ -153,25 +153,25 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-24 bg-gradient-to-br from-background to-secondary/30">
+  <section id="services" className="py-6 bg-gradient-to-br from-background to-secondary/30">
         <Services />
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-24 bg-gradient-to-br from-secondary/30 to-background">
+  <section id="about" className="py-6 bg-gradient-to-br from-secondary/30 to-background">
         <About />
       </section>
       {/* Testimonials Section */}
-      <section id="testimonials" className="py-24 bg-gradient-to-br from-secondary/30 to-background">
+  <section id="testimonials" className="py-6 bg-gradient-to-br from-secondary/30 to-background">
         <Testimonials />
       </section>
       {/* Contact Section */}
-      <section id="contact" className="py-24 bg-gradient-to-br from-background to-secondary/30">
+  <section id="contact" className="py-6 bg-gradient-to-br from-background to-secondary/30">
         <Contact />
       </section>
       {/* Footer */}
       {/* Get Quote Section */}
-      <section id="get-quote" className="py-24 bg-gradient-to-br from-secondary/30 to-background">
+  <section id="get-quote" className="py-6 bg-gradient-to-br from-secondary/30 to-background">
         <GetQuote />
       </section>
       <footer className="border-t border-border/50 bg-gradient-to-br from-background to-secondary/20">
