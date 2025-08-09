@@ -3,8 +3,8 @@ import { useState } from "react";
 const Contact = () => (
   <>
     <div className="w-full min-h-screen flex flex-col items-center justify-center py-12 bg-white">
-      <h1 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent text-center">Contact Us</h1>
-      <PresenceOfUs />
+  <h1 className="text-5xl md:text-6xl font-extrabold mb-16 bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent text-center">Contact Us</h1>
+      <GlobalPresence />
       <form className="w-full max-w-3xl mx-auto bg-white rounded-xl shadow-lg p-8 space-y-6 flex flex-col items-center">
         <input type="text" placeholder="Name" className="w-full border p-3 rounded text-lg" required />
         <input type="email" placeholder="Email" className="w-full border p-3 rounded text-lg" required />
@@ -42,12 +42,12 @@ const locations = [
   },
 ];
 
-const PresenceOfUs = () => {
+const GlobalPresence = () => {
   const [selected, setSelected] = useState(0);
   return (
-    <section className="w-full min-h-screen flex flex-col items-center justify-center bg-white mb-12 px-0">
-      <h2 className="text-3xl font-bold text-center mb-8">Presence of Us</h2>
-      <div className="w-full flex flex-col md:flex-row items-stretch justify-center gap-0 md:gap-0 h-auto md:h-[600px] bg-white rounded-none md:rounded-xl shadow-lg overflow-x-auto">
+    <section className="w-full h-full min-h-screen flex flex-col items-center justify-center bg-white mb-12 px-0 shadow-2xl" style={{height: '100vh'}}>
+      <h2 className="text-3xl font-bold text-center mb-12">Global Presence</h2>
+      <div className="w-full h-full min-h-screen flex flex-col md:flex-row items-stretch justify-center gap-0 md:gap-0 bg-white rounded-none md:rounded-xl shadow-lg overflow-x-auto">
         {/* Left: World map with interactive pins */}
         <div className="relative flex-1 min-w-[300px] max-w-full flex items-center justify-center bg-gray-50 h-[300px] md:h-full">
           <img
