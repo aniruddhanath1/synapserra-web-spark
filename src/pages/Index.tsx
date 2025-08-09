@@ -1,12 +1,18 @@
 import { Button } from "@/components/ui/button";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="flex items-center justify-between px-6 py-4">
-        <div className="text-xl font-normal text-foreground">
-          Synapserra Inc.
+        <div className="flex items-center gap-3">
+          <img 
+            src="/lovable-uploads/93703c00-d56c-4f8a-a80e-651da5c94058.png" 
+            alt="Synapserra Logo" 
+            className="h-8 w-auto"
+          />
+          <span className="text-xl font-normal text-foreground">Synapserra Inc.</span>
         </div>
         <nav className="flex items-center gap-6">
           <a href="#services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
@@ -72,6 +78,49 @@ const Index = () => {
                 to optimize your customer relationship management.
               </p>
             </div>
+          </div>
+
+          {/* Testimonials Carousel */}
+          <div className="mt-20 max-w-4xl mx-auto">
+            <h2 className="text-2xl font-medium text-foreground text-center mb-8">
+              What Our Clients Say
+            </h2>
+            <Carousel className="w-full">
+              <CarouselContent>
+                <CarouselItem>
+                  <div className="p-8 bg-card border border-border rounded-lg text-center">
+                    <p className="text-muted-foreground mb-4 italic">
+                      "Synapserra transformed our business with their exceptional Salesforce implementation. 
+                      Our CRM efficiency increased by 200% within the first quarter."
+                    </p>
+                    <div className="font-medium text-foreground">Sarah Johnson</div>
+                    <div className="text-sm text-muted-foreground">CEO, TechFlow Solutions</div>
+                  </div>
+                </CarouselItem>
+                <CarouselItem>
+                  <div className="p-8 bg-card border border-border rounded-lg text-center">
+                    <p className="text-muted-foreground mb-4 italic">
+                      "Their Java web development team delivered our e-commerce platform ahead of schedule. 
+                      Outstanding technical expertise and communication."
+                    </p>
+                    <div className="font-medium text-foreground">Michael Chen</div>
+                    <div className="text-sm text-muted-foreground">CTO, RetailMax</div>
+                  </div>
+                </CarouselItem>
+                <CarouselItem>
+                  <div className="p-8 bg-card border border-border rounded-lg text-center">
+                    <p className="text-muted-foreground mb-4 italic">
+                      "Professional, reliable, and innovative. Synapserra's .NET solutions 
+                      streamlined our operations and reduced costs significantly."
+                    </p>
+                    <div className="font-medium text-foreground">Lisa Rodriguez</div>
+                    <div className="text-sm text-muted-foreground">Director of IT, FinanceFirst</div>
+                  </div>
+                </CarouselItem>
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
           </div>
         </div>
       </main>
