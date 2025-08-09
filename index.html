@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      // Dark mode toggle script
+      (function() {
+        function setDarkMode(enabled) {
+          if (enabled) {
+            document.documentElement.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem('theme', 'light');
+          }
+        }
+        // On load, set theme from localStorage
+        if (localStorage.getItem('theme') === 'dark') {
+          document.documentElement.classList.add('dark');
+        }
+        window.setDarkMode = setDarkMode;
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/synapserra-web-spark/synapserra.ico" sizes="64x64" />
+    <title>synapserra-web-spark</title>
+    <meta name="description" content="Lovable Generated Project" />
+    <meta name="author" content="Lovable" />
+
+    <meta property="og:title" content="synapserra-web-spark" />
+    <meta property="og:description" content="Lovable Generated Project" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@lovable_dev" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <script type="module" crossorigin src="/synapserra-web-spark/assets/index-kZPuq5vf.js"></script>
+    <link rel="stylesheet" crossorigin href="/synapserra-web-spark/assets/index-CrfN50zW.css">
+  </head>
+
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
