@@ -1,44 +1,106 @@
-# Welcome to your Lovable project
+# Synapserra Web Spark
 
-## Project info
+A modern, responsive website built with React, Vite, and Tailwind CSS, featuring international presence, testimonials, services, and interactive UI elements.
 
-**URL**: https://lovable.dev/projects/974da367-d1c3-4a15-8a7a-9d0cf51f7711
+## Features
+- Multi-page layout: Home, Services, About, Testimonials, Contact, Get Quote
+- Responsive design for desktop and mobile
+- Dark mode toggle
+- Enhanced headings and gradients
+- Interactive testimonials carousel with ratings
+- Global presence section with interactive world map and Google Maps embeds
+- Full-screen, visually prominent forms for Contact and Get Quote
+- Modern UI components (accordion, cards, buttons, etc.)
 
-## How can I edit this code?
+## Tech Stack
+- **React** (with functional components)
+- **Vite** (for fast development and build)
+- **Tailwind CSS** (utility-first styling)
+- **Lucide Icons** (SVG icons)
+- **Google Maps Embed** (for location sections)
 
-There are several ways of editing your application.
+## Getting Started
 
-**Use Lovable**
+### Prerequisites
+- Node.js (v16+ recommended)
+- npm or bun
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/974da367-d1c3-4a15-8a7a-9d0cf51f7711) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
+### Installation
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+npm install
+```
+Or, if using bun:
+```sh
+bun install
 ```
 
-**Edit a file directly in GitHub**
+### Running the App
+```sh
+npm run dev
+```
+Or, if using bun:
+```sh
+bun run dev
+```
 
-- Navigate to the desired file(s).
+The app will be available at `http://localhost:5173` (default Vite port).
+
+### Building for Production
+```sh
+npm run build
+```
+Or, if using bun:
+```sh
+bun run build
+```
+
+### Linting
+```sh
+npm run lint
+```
+Or, if using bun:
+```sh
+bun run lint
+```
+
+## Project Structure
+```
+├── public/
+│   ├── favicon.ico
+│   ├── robots.txt
+│   └── lovable-uploads/
+├── src/
+│   ├── App.tsx
+│   ├── main.tsx
+│   ├── index.css
+│   ├── components/
+│   │   └── ui/ ... (UI components)
+│   ├── hooks/
+│   ├── lib/
+│   └── pages/
+│       ├── Index.tsx
+│       ├── About.tsx
+│       ├── Services.tsx
+│       ├── Testimonials.tsx
+│       ├── Contact.tsx
+│       └── GetQuote.tsx
+├── package.json
+├── tailwind.config.ts
+├── vite.config.ts
+└── README.md
+```
+
+## Customization
+- Update company info, addresses, and testimonials in the respective page files under `src/pages/`
+- Add or modify UI components in `src/components/ui/`
+- Adjust Tailwind theme in `tailwind.config.ts`
+
+## License
+MIT
+
+---
+
+For any issues or feature requests, please open an issue or contact the maintainer.
 - Click the "Edit" button (pencil icon) at the top right of the file view.
 - Make your changes and commit the changes.
 
