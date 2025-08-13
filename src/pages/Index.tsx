@@ -14,6 +14,7 @@ const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <div className="min-h-screen bg-gradient-to-br from-primary-light to-background">
+       {/* Header */}
       {/* Header */}
       {/* <header className="relative z-10 backdrop-blur-md bg-background/80 border-b border-border/50">
         <div className="max-w-7xl mx-auto px-6 py-4">
