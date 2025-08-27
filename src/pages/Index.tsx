@@ -6,12 +6,16 @@ import About from "./About";
 import Testimonials from "./Testimonials";
 import Contact from "./Contact";
 import GetQuote from "./GetQuote";
+import { useState } from "react";
+
 
 const Index = () => {
+ 
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <div className="min-h-screen bg-gradient-to-br from-primary-light to-background">
       {/* Header */}
-      <header className="relative z-10 backdrop-blur-md bg-background/80 border-b border-border/50">
+      {/* <header className="relative z-10 backdrop-blur-md bg-background/80 border-b border-border/50">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
@@ -20,7 +24,6 @@ const Index = () => {
                 alt="Synapserra Logo" 
                 className="h-32 w-auto"
               />
-              { /*<span className="text-2xl font-semibold text-foreground">Synapserra Inc.</span> */}
             </div>
             <nav className="hidden md:flex items-center gap-8">
               <a href="#services" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
@@ -54,7 +57,100 @@ const Index = () => {
             </nav>
           </div>
         </div>
-      </header>
+      </header> */}
+
+    <header className="fixed top-0 left-0 w-full z-50 bg-background/80 backdrop-blur-lg border-b border-border/50 shadow-sm">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        
+        {/* Logo */}
+        <div className="flex items-center gap-3">
+          <img
+            src="/synapserra-web-spark/lovable-uploads/93703c00-d56c-4f8a-a80e-651da5c94058.png"
+            alt="Synapserra Logo"
+            className="h-[75px] w-auto"
+          />
+        </div>
+
+        {/* Desktop Navigation */}
+<nav className="hidden md:flex items-center justify-center gap-8">
+  {["Services", "About", "Testimonials", "Contact"].map((item) => (
+    <a
+      key={item}
+      href={`#${item.toLowerCase()}`}
+      className="text-base font-medium text-muted-foreground hover:text-primary transition-colors"
+    >
+      {item}
+    </a>
+  ))}
+
+  <a href="#get-quote">
+    <Button size="sm" className="shadow-soft text-base">
+      Get Quote
+    </Button>
+  </a>
+
+  {/* Dark Mode Toggle */}
+  <button
+    type="button"
+    className="ml-4 px-3 py-2 rounded bg-muted text-foreground hover:bg-primary/10 border border-border transition-colors"
+    onClick={() => {
+      const isDark = document.documentElement.classList.contains("dark");
+      (window as any).setDarkMode?.(!isDark);
+    }}
+    aria-label="Toggle dark mode"
+  >
+    🌙 / ☀️
+  </button>
+</nav>
+
+
+        {/* Mobile Hamburger */}
+        <button
+          className="md:hidden flex flex-col gap-1.5 p-2 rounded hover:bg-muted transition"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle Menu"
+        >
+          <span
+            className={`block h-0.5 w-6 bg-foreground transition-all ${
+              isMenuOpen ? "rotate-45 translate-y-2" : ""
+            }`}
+          />
+          <span
+            className={`block h-0.5 w-6 bg-foreground transition-all ${
+              isMenuOpen ? "opacity-0" : ""
+            }`}
+          />
+          <span
+            className={`block h-0.5 w-6 bg-foreground transition-all ${
+              isMenuOpen ? "-rotate-45 -translate-y-2" : ""
+            }`}
+          />
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div className="md:hidden bg-background/95 backdrop-blur-md border-t border-border/50 shadow-lg animate-slide-down">
+          <nav className="flex flex-col p-4 gap-4">
+            {["Services", "About", "Testimonials", "Contact"].map((item) => (
+              <a
+                key={item}
+                href={`#${item.toLowerCase()}`}
+                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {item}
+              </a>
+            ))}
+            <a href="#get-quote" onClick={() => setIsMenuOpen(false)}>
+              <Button size="sm" className="shadow-soft w-full">
+                Get Quote
+              </Button>
+            </a>
+          </nav>
+        </div>
+      )}
+    </header>
 
       {/* Hero Section */}
       <section className="relative overflow-hidden">
