@@ -14,51 +14,6 @@ const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <div className="min-h-screen bg-gradient-to-br from-primary-light to-background">
-      {/* Header */}
-      {/* <header className="relative z-10 backdrop-blur-md bg-background/80 border-b border-border/50">
-        <div className="max-w-7xl mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <img 
-                src="/synapserra-web-spark/lovable-uploads/93703c00-d56c-4f8a-a80e-651da5c94058.png" 
-                alt="Synapserra Logo" 
-                className="h-32 w-auto"
-              />
-            </div>
-            <nav className="hidden md:flex items-center gap-8">
-              <a href="#services" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
-                Services
-              </a>
-              <a href="#about" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
-                About
-              </a>
-              <a href="#testimonials" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
-                Testimonials
-              </a>
-              <a href="#contact" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
-                Contact
-              </a>
-              <a href="#get-quote">
-                <Button size="sm" className="shadow-soft">
-                  Get Quote
-                </Button>
-              </a>
-              <button
-                type="button"
-                className="ml-4 px-3 py-2 rounded bg-muted text-foreground hover:bg-primary/10 border border-border transition-colors"
-                onClick={() => {
-                  const isDark = document.documentElement.classList.contains('dark');
-                  (window as any).setDarkMode?.(!isDark);
-                }}
-                aria-label="Toggle dark mode"
-              >
-                🌙 / ☀️
-              </button>
-            </nav>
-          </div>
-        </div>
-      </header> */}
-
     <header className="fixed top-0 left-0 w-full z-50 bg-background/80 backdrop-blur-lg border-b border-border/50 shadow-sm">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         
