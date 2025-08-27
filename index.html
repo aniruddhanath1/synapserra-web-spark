@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script>
+    <!-- <script>
       // Dark mode toggle script
       (function() {
         function setDarkMode(enabled) {
@@ -19,7 +19,32 @@
         }
         window.setDarkMode = setDarkMode;
       })();
-    </script>
+    </script> -->
+
+    <script>
+  // Dark mode bootstrap: no flash, respects system on first visit,
+  // persists user choice, and keeps window.setDarkMode for compatibility.
+  (function () {
+    function apply(dark) {
+      const root = document.documentElement;
+      root.classList.toggle('dark', !!dark);
+      try { localStorage.setItem('theme', dark ? 'dark' : 'light'); } catch {}
+    }
+
+    // 1) First visit: follow system preference. Subsequent visits: follow saved.
+    var saved = null;
+    try { saved = localStorage.getItem('theme'); } catch {}
+    var sysDark = false;
+    try { sysDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches; } catch {}
+
+    var dark = saved ? saved === 'dark' : sysDark;
+    if (dark) document.documentElement.classList.add('dark'); // prevent flash
+
+    // 2) Expose a safe toggle
+    window.setDarkMode = function (enabled) { apply(!!enabled); };
+  })();
+</script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="/synapserra.ico" sizes="64x64" />
