@@ -176,7 +176,7 @@ export default function Contact() {
   return (
     <section id="contact" className="bg-background">
       <div className="max-w-6xl mx-auto px-6 pt-12">
-        <h1 className="text-4xl md:text-5xl font-extrabold text-foreground text-center">
+        <h1 className="text-4xl md:text-5xl font-extrabold text-foreground text-center bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent" >
           Contact Us
         </h1>
         <p className="text-center text-muted-foreground mt-2 mb-8">

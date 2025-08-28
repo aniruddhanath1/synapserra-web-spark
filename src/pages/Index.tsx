@@ -23,9 +23,11 @@ import Contact from "./Contact";
 import GetQuote from "./GetQuote";
 import { useState, useEffect } from "react";
 import TrustedPartners from "./TrustedPartners";
+import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from "lucide-react";
 
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+   const year = new Date().getFullYear();
   const Counter = ({
     end,
     duration = 2000,
@@ -103,7 +105,7 @@ const Index = () => {
             <img
               src="/synapserra-web-spark/lovable-uploads/93703c00-d56c-4f8a-a80e-651da5c94058.png"
               alt="Synapserra Logo"
-              className="h-[clamp(40px,4.2vw,60px)] w-auto  object-contain "
+              className="h-20 w-auto  object-contain "
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             />
           </div>
@@ -380,7 +382,7 @@ const Index = () => {
       {/* Services Section */}
       <section
         id="services"
-        className="scroll-mt-[36px] py-6 bg-gradient-to-br from-background to-secondary/30"
+        className="scroll-mt-[38px] py-6 bg-gradient-to-br from-background to-secondary/30"
       >
         <Services />
       </section>
@@ -388,21 +390,21 @@ const Index = () => {
       {/* About Section */}
       <section
         id="about"
-        className="scroll-mt-[36px] py-6 bg-gradient-to-br from-secondary/30 to-background"
+        className="scroll-mt-[38px] py-6 bg-gradient-to-br from-secondary/30 to-background"
       >
         <About />
       </section>
       {/* Testimonials Section */}
       <section
         id="testimonials"
-        className="scroll-mt-[36px] py-6 bg-gradient-to-br from-secondary/30 to-background"
+        className="scroll-mt-[38px] py-6 bg-gradient-to-br from-secondary/30 to-background"
       >
         <Testimonials />
       </section>
       {/* Contact Section */}
       <section
         id="contact"
-        className="scroll-mt-[36px] py-6 bg-gradient-to-br from-background to-secondary/30"
+        className="scroll-mt-[38px] py-6 bg-gradient-to-br from-background to-secondary/30"
       >
         <Contact />
       </section>
@@ -410,20 +412,20 @@ const Index = () => {
       {/* Get Quote Section */}
       <section
         id="get-quote"
-        className="scroll-mt-[36px] py-6 bg-gradient-to-br from-secondary/30 to-background"
+        className="scroll-mt-[38px] py-6 bg-gradient-to-br from-secondary/30 to-background"
       >
         <GetQuote />
       </section>
 
        <section
         id="trusted-partners"
-        className="scroll-mt-[36px] py-6 bg-gradient-to-br from-secondary/30 to-background"
+        className="scroll-mt-[38px] py-6 bg-gradient-to-br from-secondary/30 to-background"
       >
         <TrustedPartners />
       </section>
 
 
-      <footer className="border-t border-border/50 bg-gradient-to-br from-background to-secondary/20">
+      {/* <footer className="border-t border-border/50 bg-gradient-to-br from-background to-secondary/20">
         <div className="max-w-7xl mx-auto px-6 py-12">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="flex items-center gap-3">
@@ -455,7 +457,196 @@ const Index = () => {
             </div>
           </div>
         </div>
-      </footer>
+      </footer> */}
+
+       <footer className="relative border-t border-border/50">
+      {/* Gradient panel */}
+      <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-cyan-900 dark:from-slate-950 dark:via-slate-900 dark:to-cyan-950 text-white">
+        <div className="max-w-7xl mx-auto px-6 py-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+            {/* Brand */}
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <img
+                  src="/synapserra-web-spark/lovable-uploads/93703c00-d56c-4f8a-a80e-651da5c94058.png"
+                  alt="Synapserra"
+                  className="h-20 w-auto rounded-lg ring-1 ring-white/10 bg-white/5 p-1"
+                />
+                <span className="text-xl font-semibold tracking-tight">
+                  Synapserra
+                </span>
+              </div>
+              <p className="text-sm text-white/70 leading-relaxed">
+                Scalable IT services across web, cloud, and CRM—engineered for
+                growth and reliability.
+              </p>
+
+              {/* Socials */}
+              <div className="flex items-center gap-3 pt-2">
+                <a
+                  href="#"
+                  aria-label="LinkedIn"
+                  className="p-2 rounded-lg bg-white/5 hover:bg-white/10 transition"
+                >
+                  <Linkedin className="h-4 w-4" />
+                </a>
+                <a
+                  href="#"
+                  aria-label="Twitter"
+                  className="p-2 rounded-lg bg-white/5 hover:bg-white/10 transition"
+                >
+                  <Twitter className="h-4 w-4" />
+                </a>
+                <a
+                  href="#"
+                  aria-label="GitHub"
+                  className="p-2 rounded-lg bg-white/5 hover:bg-white/10 transition"
+                >
+                  <Github className="h-4 w-4" />
+                </a>
+              </div>
+            </div>
+
+            {/* Quick Links */}
+            <nav aria-labelledby="footer-quicklinks">
+              <h3 id="footer-quicklinks" className="text-lg font-semibold mb-4">
+                Quick Links
+              </h3>
+              <ul className="space-y-3 text-white/80">
+                <li>
+                  <a href="#top" className="hover:text-white transition">
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a href="#services" className="hover:text-white transition">
+                    Services
+                  </a>
+                </li>
+                <li>
+                  <a href="#about" className="hover:text-white transition">
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a href="#testimonials" className="hover:text-white transition">
+                    Testimonials
+                  </a>
+                </li>
+                <li>
+                  <a href="#contact" className="hover:text-white transition">
+                    Contact
+                  </a>
+                </li>
+                <li>
+                  <a href="#get-quote" className="hover:text-white transition">
+                    Get a Quote
+                  </a>
+                </li>
+              </ul>
+            </nav>
+
+            {/* Services */}
+            <nav aria-labelledby="footer-services">
+              <h3 id="footer-services" className="text-lg font-semibold mb-4">
+                Services
+              </h3>
+              <ul className="space-y-3 text-white/80">
+                <li>
+                  <a href="#services" className="hover:text-white transition">
+                    Web Development
+                  </a>
+                </li>
+                <li>
+                  <a href="#services" className="hover:text-white transition">
+                    Salesforce & CRM
+                  </a>
+                </li>
+                <li>
+                  <a href="#services" className="hover:text-white transition">
+                    Cloud & DevOps
+                  </a>
+                </li>
+                <li>
+                  <a href="#services" className="hover:text-white transition">
+                    Cyber Security
+                  </a>
+                </li>
+              </ul>
+            </nav>
+
+            {/* Contact */}
+            <address
+              aria-labelledby="footer-contact"
+              className="not-italic space-y-4"
+            >
+              <h3 id="footer-contact" className="text-lg font-semibold mb-2">
+                Contact Us
+              </h3>
+              <p className="flex items-start gap-3 text-white/80">
+                <MapPin className="h-5 w-5 mt-0.5 shrink-0" />
+                Prestige Tech Park Rd, Outer Ring Road, Bengaluru, 560103
+              </p>
+              <a
+                href="mailto:info@synapserra.com"
+                className="flex items-center gap-3 text-white/80 hover:text-white transition"
+              >
+                <Mail className="h-5 w-5" />
+                info@synapserra.com
+              </a>
+              <a
+                href="tel:+918004539892"
+                className="flex items-center gap-3 text-white/80 hover:text-white transition"
+              >
+                <Phone className="h-5 w-5" />
+                +91 8004539892
+              </a>
+            </address>
+          </div>
+        </div>
+      </div>
+
+      {/* Disclaimer + Copyright */}
+      <div className="bg-slate-950 text-white/70">
+        <div className="max-w-7xl mx-auto px-6 py-4 text-xs leading-relaxed">
+          <p>
+            Disclaimer: The information on this website is provided for general
+            guidance. Projects, client names, and metrics may include composites
+            or anonymized details. For verified case studies and proposals,{" "}
+            <a href="#contact" className="text-primary-300 hover:underline">
+              contact our team
+            </a>
+            .
+          </p>
+        </div>
+        <div className="border-t border-white/10">
+          <div className="max-w-7xl mx-auto px-6 py-4 text-xs sm:text-sm flex flex-col sm:flex-row gap-3 sm:gap-6 items-center justify-between">
+            <span>© {year} Synapserra Inc. All rights reserved.</span>
+            <div className="flex items-center gap-6">
+              <a href="#privacy" className="hover:text-white transition">
+                Privacy Policy
+              </a>
+              <a href="#terms" className="hover:text-white transition">
+                Terms of Service
+              </a>
+              <a href="#cookies" className="hover:text-white transition">
+                Cookie Settings
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Back-to-top (optional) */}
+      <a
+        href="#top"
+        className="hidden md:flex items-center justify-center rounded-full h-10 w-10 bg-primary text-white shadow-lg ring-2 ring-white/20 hover:translate-y-[-2px] transition fixed bottom-6 right-6"
+        aria-label="Back to top"
+        title="Back to top"
+      >
+        ↑
+      </a>
+    </footer>
     </div>
   );
 };

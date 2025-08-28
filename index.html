@@ -22,28 +22,38 @@
     </script> -->
 
     <script>
-  // Dark mode bootstrap: no flash, respects system on first visit,
-  // persists user choice, and keeps window.setDarkMode for compatibility.
-  (function () {
-    function apply(dark) {
-      const root = document.documentElement;
-      root.classList.toggle('dark', !!dark);
-      try { localStorage.setItem('theme', dark ? 'dark' : 'light'); } catch {}
-    }
+      // Dark mode bootstrap: no flash, respects system on first visit,
+      // persists user choice, and keeps window.setDarkMode for compatibility.
+      (function () {
+        function apply(dark) {
+          const root = document.documentElement;
+          root.classList.toggle("dark", !!dark);
+          try {
+            localStorage.setItem("theme", dark ? "dark" : "light");
+          } catch {}
+        }
 
-    // 1) First visit: follow system preference. Subsequent visits: follow saved.
-    var saved = null;
-    try { saved = localStorage.getItem('theme'); } catch {}
-    var sysDark = false;
-    try { sysDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches; } catch {}
+        // 1) First visit: follow system preference. Subsequent visits: follow saved.
+        var saved = null;
+        try {
+          saved = localStorage.getItem("theme");
+        } catch {}
+        var sysDark = false;
+        try {
+          sysDark =
+            window.matchMedia &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches;
+        } catch {}
 
-    var dark = saved ? saved === 'dark' : sysDark;
-    if (dark) document.documentElement.classList.add('dark'); // prevent flash
+        var dark = saved ? saved === "dark" : sysDark;
+        if (dark) document.documentElement.classList.add("dark"); // prevent flash
 
-    // 2) Expose a safe toggle
-    window.setDarkMode = function (enabled) { apply(!!enabled); };
-  })();
-</script>
+        // 2) Expose a safe toggle
+        window.setDarkMode = function (enabled) {
+          apply(!!enabled);
+        };
+      })();
+    </script>
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -55,11 +65,20 @@
     <meta property="og:title" content="synapserra-web-spark" />
     <meta property="og:description" content="Lovable Generated Project" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta
+      property="og:image"
+      content="https://lovable.dev/opengraph-image-p98pqg.png"
+    />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta
+      name="twitter:image"
+      content="https://lovable.dev/opengraph-image-p98pqg.png"
+    />
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   </head>
 
   <body>
