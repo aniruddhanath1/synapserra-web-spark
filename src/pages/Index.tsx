@@ -190,7 +190,7 @@ const Index = () => {
           </div>
         )}
       </header>
-      <div className="h-[80px]" />
+      <div className="h-[70px]" />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden">
@@ -203,7 +203,7 @@ const Index = () => {
 
         <div className="relative max-w-7xl mx-auto px-6 py-24 lg:py-32">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-foreground mb-8 tracking-tight animate-fade-in-up">
+            {/* <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-foreground mb-8 tracking-tight animate-fade-in-up">
               <span className="bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">
                 Synapserra
               </span>
@@ -235,7 +235,38 @@ const Index = () => {
               >
                 Explore Services
               </Button>
-            </div>
+            </div> */}
+            
+              <h1
+  className="font-montserrat text-5xl md:text-6xl font-extrabold tracking-tight 
+             text-center bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 
+             bg-clip-text text-transparent"
+>
+  Scalable IT Services for <br className="hidden md:block" /> Modern Businesses
+</h1>
+
+<p className="mt-4 text-xl text-muted-foreground max-w-2xl text-center mx-auto">
+  Web, Cloud, and CRM solutions engineered to move your KPIs, not just your code.
+</p>
+
+<div className="mt-8 flex flex-wrap justify-center gap-4 mb-8">
+  <Button
+    size="lg"
+    asChild
+    className="px-8 py-3 text-lg bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl transition"
+  >
+    <a href="#get-quote">Get a Free Assessment</a>
+  </Button>
+
+  <Button
+    size="lg"
+    variant="outline"
+    asChild
+    className="px-8 py-3 text-lg border-2 hover:border-blue-500 hover:text-blue-600 transition"
+  >
+    <a href="#services">See How It Works</a>
+  </Button>
+</div>
 
             {/* Technology Icons */}
             <div
