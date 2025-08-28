@@ -278,6 +278,9 @@ export default function Contact() {
             </div>
           </div>
 
+
+
+
           {/* Mini map – hidden on small screens, shows on md+ */}
           <div className="hidden md:block rounded-2xl overflow-hidden border border-border/50 shadow-sm">
             <div className="px-6 pt-6">
@@ -295,6 +298,8 @@ export default function Contact() {
               referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
+
+          
         </div>
       </div>
     </section>
