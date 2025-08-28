@@ -10,6 +10,7 @@ import Testimonials from "./pages/Testimonials";
 import Contact from "./pages/Contact";
 import GetQuote from "./pages/GetQuote";
 import NotFound from "./pages/NotFound";
+import TrustedPartners from "./pages/TrustedPartners";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ const App = () => (
             <Route path="/synapserra-web-spark/testimonials" element={<Testimonials />} />
             <Route path="/synapserra-web-spark/contact" element={<Contact />} />
             <Route path="/synapserra-web-spark/get-quote" element={<GetQuote />} />
+            <Route path="/synapserra-web-spark/trusted-partners" element={<TrustedPartners />} />
             {/* Catch-all route for 404 */}
             <Route path="*" element={<NotFound />} />
           </Routes>

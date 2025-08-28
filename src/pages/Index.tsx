@@ -22,6 +22,7 @@ import Testimonials from "./Testimonials";
 import Contact from "./Contact";
 import GetQuote from "./GetQuote";
 import { useState, useEffect } from "react";
+import TrustedPartners from "./TrustedPartners";
 
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -413,6 +414,15 @@ const Index = () => {
       >
         <GetQuote />
       </section>
+
+       <section
+        id="trusted-partners"
+        className="scroll-mt-[36px] py-6 bg-gradient-to-br from-secondary/30 to-background"
+      >
+        <TrustedPartners />
+      </section>
+
+
       <footer className="border-t border-border/50 bg-gradient-to-br from-background to-secondary/20">
         <div className="max-w-7xl mx-auto px-6 py-12">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
