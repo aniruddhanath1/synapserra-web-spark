@@ -1,10 +1,10 @@
-// src/pages/Process.tsx
+
 import React, { useEffect, useRef, useState } from "react";
 import {
   MessageSquare,
   ClipboardCheck,
   Rocket,
-  LifeBuoy, // <-- correct Lucide name
+  LifeBuoy, 
   ChevronRight,
 } from "lucide-react";
 

@@ -534,14 +534,14 @@ const Index = () => {
               {/* Brand */}
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
-                  <img
-                    src="/synapserra-web-spark/lovable-uploads/synap_logo.png"
+                  {/* <img
+                    src="/synapserra-web-spark/lovable-uploads/synap_logojpg.jpg"
                     alt="Synapserra"
-                    className="h-11 w-auto rounded-lg ring-1 ring-white/10 bg-white/5 p-1"
-                  />
-                  {/* <span className="text-xl font-semibold tracking-tight">
+                    className="h-8 w-auto object-contain select-none dark:mix-blend-screen"
+                  /> */}
+                  <span className="font-semibold tracking-tight text-3xl md:text-3xl font-bold mb-8 bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent text-center">
                     Synapserra
-                  </span> */}
+                  </span>
                 </div>
                 <p className="text-sm text-white/70 leading-relaxed">
                   Scalable IT services across web, cloud, and CRM—engineered for
@@ -671,11 +671,11 @@ const Index = () => {
                   info@synapserra.com
                 </a>
                 <a
-                  href="tel:+918004539892"
+                  href="tel:+918792229643"
                   className="flex items-center gap-3 text-white/80 hover:text-white transition"
                 >
                   <Phone className="h-5 w-5" />
-                  +91 8004539892
+                  +91 8792229643
                 </a>
               </address>
             </div>

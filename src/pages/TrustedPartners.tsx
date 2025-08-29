@@ -1,16 +1,14 @@
-// src/pages/TrustedPartners.tsx (or src/components/TrustedPartners.tsx)
 import React from "react";
 
 const LOGOS = [
-//   { name: "Salesforce", src: "c/partners/salesforce.svg", href: "https://salesforce.com" },
   { name: "Spotify",    src: "/synapserra-web-spark/partners/spotify.png",   href: "https://spotify.com" },
   { name: "IBM",        src: "/synapserra-web-spark/partners/ibm.png",       href: "https://ibm.com" },
-  { name: "Uber",       src: "/synapserra-web-spark/partners/uber.png",      href: "https://uber.com" },
-  { name: "Oracle",     src: "/synapserra-web-spark/partners/oracle.png",    href: "https://oracle.com" },
-  { name: "Airbnb",     src: "/synapserra-web-spark/partners/airnb.png",    href: "https://airbnb.com" },
+  { name: "Uber",       src: "/synapserra-web-spark/partners/uber1.webp",      href: "https://uber.com" },
+  { name: "Oracle",     src: "/synapserra-web-spark/partners/oraclelogo1.png",    href: "https://oracle.com" },
+  { name: "Airbnb",     src: "/synapserra-web-spark/partners/airbnblogo1.png",    href: "https://airbnb.com" },
 ];
 
-// You can add as many logos as you like. The marquee duplicates them to create a seamless loop.
+
 
 const TrustedPartners: React.FC = () => {
   return (
