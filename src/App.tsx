@@ -11,6 +11,7 @@ import Contact from "./pages/Contact";
 import GetQuote from "./pages/GetQuote";
 import NotFound from "./pages/NotFound";
 import TrustedPartners from "./pages/TrustedPartners";
+import CaseStudies from "./pages/CaseStudies";
 
 const queryClient = new QueryClient();
 
@@ -21,16 +22,29 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-            <Route path="/synapserra-web-spark" element={<Index />} />
-            <Route path="/synapserra-web-spark/about" element={<About />} />
-            <Route path="/synapserra-web-spark/services" element={<Services />} />
-            <Route path="/synapserra-web-spark/testimonials" element={<Testimonials />} />
-            <Route path="/synapserra-web-spark/contact" element={<Contact />} />
-            <Route path="/synapserra-web-spark/get-quote" element={<GetQuote />} />
-            <Route path="/synapserra-web-spark/trusted-partners" element={<TrustedPartners />} />
-            {/* Catch-all route for 404 */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <Route path="/synapserra-web-spark" element={<Index />} />
+          <Route path="/synapserra-web-spark/about" element={<About />} />
+          <Route
+            path="/synapserra-web-spark/CaseStudies"
+            element={<CaseStudies />}
+          />
+          <Route path="/synapserra-web-spark/services" element={<Services />} />
+          <Route
+            path="/synapserra-web-spark/testimonials"
+            element={<Testimonials />}
+          />
+          <Route path="/synapserra-web-spark/contact" element={<Contact />} />
+          <Route
+            path="/synapserra-web-spark/get-quote"
+            element={<GetQuote />}
+          />
+          <Route
+            path="/synapserra-web-spark/trusted-partners"
+            element={<TrustedPartners />}
+          />
+          {/* Catch-all route for 404 */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

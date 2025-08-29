@@ -23,11 +23,13 @@ import Contact from "./Contact";
 import GetQuote from "./GetQuote";
 import { useState, useEffect } from "react";
 import TrustedPartners from "./TrustedPartners";
+import CaseStudies from "./CaseStudies";
+import Process from "./Process";
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from "lucide-react";
 
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-   const year = new Date().getFullYear();
+  const year = new Date().getFullYear();
   const Counter = ({
     end,
     duration = 2000,
@@ -111,8 +113,15 @@ const Index = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center justify-center gap-8">
-            {["Services", "About", "Testimonials", "Contact"].map((item) => (
+          <nav className="hidden lg:flex items-center justify-center gap-8">
+            {[
+              "Services",
+              "About",
+              "Process",
+              "Case-Studies",
+              "Testimonials",
+              "Contact",
+            ].map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
@@ -145,7 +154,7 @@ const Index = () => {
 
           {/* Mobile Hamburger */}
           <button
-            className="md:hidden flex flex-col gap-1.5 p-2 rounded hover:bg-muted transition"
+            className="lg:hidden flex flex-col gap-1.5 p-2 rounded hover:bg-muted transition"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle Menu"
           >
@@ -169,9 +178,16 @@ const Index = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-background/95 backdrop-blur-md border-t border-border/50 shadow-lg animate-slide-down">
+          <div className="lg:hidden bg-background/95 backdrop-blur-md border-t border-border/50 shadow-lg animate-slide-down">
             <nav className="flex flex-col p-4 gap-4">
-              {["Services", "About", "Testimonials", "Contact"].map((item) => (
+              {[
+                "Services",
+                "About",
+                "Process",
+                "Case Studies",
+                "Testimonials",
+                "Contact",
+              ].map((item) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}
@@ -190,10 +206,10 @@ const Index = () => {
           </div>
         )}
       </header>
-      <div className="h-[70px]" />
+      <div className="h-[70px] sm:h-[72px]" />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden max-w-7xl mx-auto px-4 sm:px-6">
         {/* Background decorative elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-32 w-80 h-80 bg-primary/10 rounded-full blur-3xl animate-pulse-slow"></div>
@@ -236,37 +252,39 @@ const Index = () => {
                 Explore Services
               </Button>
             </div> */}
-            
-              <h1
-  className="font-montserrat text-5xl md:text-6xl font-extrabold tracking-tight 
+
+            <h1
+              className="font-montserrat text-5xl md:text-6xl font-extrabold tracking-tight 
              text-center bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 
              bg-clip-text text-transparent"
->
-  Scalable IT Services for <br className="hidden md:block" /> Modern Businesses
-</h1>
+            >
+              Scalable IT Services for <br className="hidden md:block" /> Modern
+              Businesses
+            </h1>
 
-<p className="mt-4 text-xl text-muted-foreground max-w-2xl text-center mx-auto">
-  Web, Cloud, and CRM solutions engineered to move your KPIs, not just your code.
-</p>
+            <p className="mt-4 text-xl text-muted-foreground max-w-2xl text-center mx-auto">
+              Web, Cloud, and CRM solutions engineered to move your KPIs, not
+              just your code.
+            </p>
 
-<div className="mt-8 flex flex-wrap justify-center gap-4 mb-8">
-  <Button
-    size="lg"
-    asChild
-    className="px-8 py-3 text-lg bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl transition"
-  >
-    <a href="#get-quote">Get a Free Assessment</a>
-  </Button>
+            <div className="mt-8 flex flex-wrap justify-center gap-4 mb-8">
+              <Button
+                size="lg"
+                asChild
+                className="px-8 py-3 text-lg bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl transition"
+              >
+                <a href="#get-quote">Get a Free Assessment</a>
+              </Button>
 
-  <Button
-    size="lg"
-    variant="outline"
-    asChild
-    className="px-8 py-3 text-lg border-2 hover:border-blue-500 hover:text-blue-600 transition"
-  >
-    <a href="#services">See How It Works</a>
-  </Button>
-</div>
+              <Button
+                size="lg"
+                variant="outline"
+                asChild
+                className="px-8 py-3 text-lg border-2 hover:border-blue-500 hover:text-blue-600 transition"
+              >
+                <a href="#services">See How It Works</a>
+              </Button>
+            </div>
 
             {/* Technology Icons */}
             <div
@@ -425,6 +443,7 @@ const Index = () => {
       >
         <About />
       </section>
+
       {/* Testimonials Section */}
       <section
         id="testimonials"
@@ -432,6 +451,22 @@ const Index = () => {
       >
         <Testimonials />
       </section>
+
+      <section
+        id="process"
+        className="scroll-mt-[38px] py-6 bg-gradient-to-br from-background to-secondary/30"
+      >
+        <Process />
+      </section>
+
+      {/* Case Studies Section (new) */}
+      <section
+        id="case-studies"
+        className="scroll-mt-[38px] py-6 bg-gradient-to-br from-secondary/30 to-background"
+      >
+        <CaseStudies />
+      </section>
+
       {/* Contact Section */}
       <section
         id="contact"
@@ -439,7 +474,9 @@ const Index = () => {
       >
         <Contact />
       </section>
+
       {/* Footer */}
+
       {/* Get Quote Section */}
       <section
         id="get-quote"
@@ -448,13 +485,12 @@ const Index = () => {
         <GetQuote />
       </section>
 
-       <section
+      <section
         id="trusted-partners"
         className="scroll-mt-[38px] py-6 bg-gradient-to-br from-secondary/30 to-background"
       >
         <TrustedPartners />
       </section>
-
 
       {/* <footer className="border-t border-border/50 bg-gradient-to-br from-background to-secondary/20">
         <div className="max-w-7xl mx-auto px-6 py-12">
@@ -490,194 +526,204 @@ const Index = () => {
         </div>
       </footer> */}
 
-       <footer className="relative border-t border-border/50">
-      {/* Gradient panel */}
-      <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-cyan-900 dark:from-slate-950 dark:via-slate-900 dark:to-cyan-950 text-white">
-        <div className="max-w-7xl mx-auto px-6 py-12">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-            {/* Brand */}
-            <div className="space-y-4">
-              <div className="flex items-center gap-3">
-                <img
-                  src="/synapserra-web-spark/lovable-uploads/93703c00-d56c-4f8a-a80e-651da5c94058.png"
-                  alt="Synapserra"
-                  className="h-20 w-auto rounded-lg ring-1 ring-white/10 bg-white/5 p-1"
-                />
-                <span className="text-xl font-semibold tracking-tight">
-                  Synapserra
-                </span>
+      <footer className="relative border-t border-border/50">
+        {/* Gradient panel */}
+        <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-cyan-900 dark:from-slate-950 dark:via-slate-900 dark:to-cyan-950 text-white">
+          <div className="max-w-7xl mx-auto px-6 py-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+              {/* Brand */}
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <img
+                    src="/synapserra-web-spark/lovable-uploads/93703c00-d56c-4f8a-a80e-651da5c94058.png"
+                    alt="Synapserra"
+                    className="h-20 w-auto rounded-lg ring-1 ring-white/10 bg-white/5 p-1"
+                  />
+                  <span className="text-xl font-semibold tracking-tight">
+                    Synapserra
+                  </span>
+                </div>
+                <p className="text-sm text-white/70 leading-relaxed">
+                  Scalable IT services across web, cloud, and CRM—engineered for
+                  growth and reliability.
+                </p>
+
+                {/* Socials */}
+                <div className="flex items-center gap-3 pt-2">
+                  <a
+                    href="#"
+                    aria-label="LinkedIn"
+                    className="p-2 rounded-lg bg-white/5 hover:bg-white/10 transition"
+                  >
+                    <Linkedin className="h-4 w-4" />
+                  </a>
+                  <a
+                    href="#"
+                    aria-label="Twitter"
+                    className="p-2 rounded-lg bg-white/5 hover:bg-white/10 transition"
+                  >
+                    <Twitter className="h-4 w-4" />
+                  </a>
+                  <a
+                    href="#"
+                    aria-label="GitHub"
+                    className="p-2 rounded-lg bg-white/5 hover:bg-white/10 transition"
+                  >
+                    <Github className="h-4 w-4" />
+                  </a>
+                </div>
               </div>
-              <p className="text-sm text-white/70 leading-relaxed">
-                Scalable IT services across web, cloud, and CRM—engineered for
-                growth and reliability.
-              </p>
 
-              {/* Socials */}
-              <div className="flex items-center gap-3 pt-2">
-                <a
-                  href="#"
-                  aria-label="LinkedIn"
-                  className="p-2 rounded-lg bg-white/5 hover:bg-white/10 transition"
+              {/* Quick Links */}
+              <nav aria-labelledby="footer-quicklinks">
+                <h3
+                  id="footer-quicklinks"
+                  className="text-lg font-semibold mb-4"
                 >
-                  <Linkedin className="h-4 w-4" />
-                </a>
-                <a
-                  href="#"
-                  aria-label="Twitter"
-                  className="p-2 rounded-lg bg-white/5 hover:bg-white/10 transition"
-                >
-                  <Twitter className="h-4 w-4" />
-                </a>
-                <a
-                  href="#"
-                  aria-label="GitHub"
-                  className="p-2 rounded-lg bg-white/5 hover:bg-white/10 transition"
-                >
-                  <Github className="h-4 w-4" />
-                </a>
-              </div>
-            </div>
+                  Quick Links
+                </h3>
+                <ul className="space-y-3 text-white/80">
+                  <li>
+                    <a href="#top" className="hover:text-white transition">
+                      Home
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#services" className="hover:text-white transition">
+                      Services
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#about" className="hover:text-white transition">
+                      About
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#testimonials"
+                      className="hover:text-white transition"
+                    >
+                      Testimonials
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#contact" className="hover:text-white transition">
+                      Contact
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#get-quote"
+                      className="hover:text-white transition"
+                    >
+                      Get a Quote
+                    </a>
+                  </li>
+                </ul>
+              </nav>
 
-            {/* Quick Links */}
-            <nav aria-labelledby="footer-quicklinks">
-              <h3 id="footer-quicklinks" className="text-lg font-semibold mb-4">
-                Quick Links
-              </h3>
-              <ul className="space-y-3 text-white/80">
-                <li>
-                  <a href="#top" className="hover:text-white transition">
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a href="#services" className="hover:text-white transition">
-                    Services
-                  </a>
-                </li>
-                <li>
-                  <a href="#about" className="hover:text-white transition">
-                    About
-                  </a>
-                </li>
-                <li>
-                  <a href="#testimonials" className="hover:text-white transition">
-                    Testimonials
-                  </a>
-                </li>
-                <li>
-                  <a href="#contact" className="hover:text-white transition">
-                    Contact
-                  </a>
-                </li>
-                <li>
-                  <a href="#get-quote" className="hover:text-white transition">
-                    Get a Quote
-                  </a>
-                </li>
-              </ul>
-            </nav>
+              {/* Services */}
+              <nav aria-labelledby="footer-services">
+                <h3 id="footer-services" className="text-lg font-semibold mb-4">
+                  Services
+                </h3>
+                <ul className="space-y-3 text-white/80">
+                  <li>
+                    <a href="#services" className="hover:text-white transition">
+                      Web Development
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#services" className="hover:text-white transition">
+                      Salesforce & CRM
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#services" className="hover:text-white transition">
+                      Cloud & DevOps
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#services" className="hover:text-white transition">
+                      Cyber Security
+                    </a>
+                  </li>
+                </ul>
+              </nav>
 
-            {/* Services */}
-            <nav aria-labelledby="footer-services">
-              <h3 id="footer-services" className="text-lg font-semibold mb-4">
-                Services
-              </h3>
-              <ul className="space-y-3 text-white/80">
-                <li>
-                  <a href="#services" className="hover:text-white transition">
-                    Web Development
-                  </a>
-                </li>
-                <li>
-                  <a href="#services" className="hover:text-white transition">
-                    Salesforce & CRM
-                  </a>
-                </li>
-                <li>
-                  <a href="#services" className="hover:text-white transition">
-                    Cloud & DevOps
-                  </a>
-                </li>
-                <li>
-                  <a href="#services" className="hover:text-white transition">
-                    Cyber Security
-                  </a>
-                </li>
-              </ul>
-            </nav>
-
-            {/* Contact */}
-            <address
-              aria-labelledby="footer-contact"
-              className="not-italic space-y-4"
-            >
-              <h3 id="footer-contact" className="text-lg font-semibold mb-2">
-                Contact Us
-              </h3>
-              <p className="flex items-start gap-3 text-white/80">
-                <MapPin className="h-5 w-5 mt-0.5 shrink-0" />
-                Prestige Tech Park Rd, Outer Ring Road, Bengaluru, 560103
-              </p>
-              <a
-                href="mailto:info@synapserra.com"
-                className="flex items-center gap-3 text-white/80 hover:text-white transition"
+              {/* Contact */}
+              <address
+                aria-labelledby="footer-contact"
+                className="not-italic space-y-4"
               >
-                <Mail className="h-5 w-5" />
-                info@synapserra.com
-              </a>
-              <a
-                href="tel:+918004539892"
-                className="flex items-center gap-3 text-white/80 hover:text-white transition"
-              >
-                <Phone className="h-5 w-5" />
-                +91 8004539892
-              </a>
-            </address>
-          </div>
-        </div>
-      </div>
-
-      {/* Disclaimer + Copyright */}
-      <div className="bg-slate-950 text-white/70">
-        <div className="max-w-7xl mx-auto px-6 py-4 text-xs leading-relaxed">
-          <p>
-            Disclaimer: The information on this website is provided for general
-            guidance. Projects, client names, and metrics may include composites
-            or anonymized details. For verified case studies and proposals,{" "}
-            <a href="#contact" className="text-primary-300 hover:underline">
-              contact our team
-            </a>
-            .
-          </p>
-        </div>
-        <div className="border-t border-white/10">
-          <div className="max-w-7xl mx-auto px-6 py-4 text-xs sm:text-sm flex flex-col sm:flex-row gap-3 sm:gap-6 items-center justify-between">
-            <span>© {year} Synapserra Inc. All rights reserved.</span>
-            <div className="flex items-center gap-6">
-              <a href="#privacy" className="hover:text-white transition">
-                Privacy Policy
-              </a>
-              <a href="#terms" className="hover:text-white transition">
-                Terms of Service
-              </a>
-              <a href="#cookies" className="hover:text-white transition">
-                Cookie Settings
-              </a>
+                <h3 id="footer-contact" className="text-lg font-semibold mb-2">
+                  Contact Us
+                </h3>
+                <p className="flex items-start gap-3 text-white/80">
+                  <MapPin className="h-5 w-5 mt-0.5 shrink-0" />
+                  Prestige Tech Park Rd, Outer Ring Road, Bengaluru, 560103
+                </p>
+                <a
+                  href="mailto:info@synapserra.com"
+                  className="flex items-center gap-3 text-white/80 hover:text-white transition"
+                >
+                  <Mail className="h-5 w-5" />
+                  info@synapserra.com
+                </a>
+                <a
+                  href="tel:+918004539892"
+                  className="flex items-center gap-3 text-white/80 hover:text-white transition"
+                >
+                  <Phone className="h-5 w-5" />
+                  +91 8004539892
+                </a>
+              </address>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Back-to-top (optional) */}
-      <a
-        href="#top"
-        className="hidden md:flex items-center justify-center rounded-full h-10 w-10 bg-primary text-white shadow-lg ring-2 ring-white/20 hover:translate-y-[-2px] transition fixed bottom-6 right-6"
-        aria-label="Back to top"
-        title="Back to top"
-      >
-        ↑
-      </a>
-    </footer>
+        {/* Disclaimer + Copyright */}
+        <div className="bg-slate-950 text-white/70">
+          <div className="max-w-7xl mx-auto px-6 py-4 text-xs leading-relaxed">
+            <p>
+              Disclaimer: The information on this website is provided for
+              general guidance. Projects, client names, and metrics may include
+              composites or anonymized details. For verified case studies and
+              proposals,{" "}
+              <a href="#contact" className="text-primary-300 hover:underline">
+                contact our team
+              </a>
+              .
+            </p>
+          </div>
+          <div className="border-t border-white/10">
+            <div className="max-w-7xl mx-auto px-6 py-4 text-xs sm:text-sm flex flex-col sm:flex-row gap-3 sm:gap-6 items-center justify-between">
+              <span>© {year} Synapserra Inc. All rights reserved.</span>
+              <div className="flex items-center gap-6">
+                <a href="#privacy" className="hover:text-white transition">
+                  Privacy Policy
+                </a>
+                <a href="#terms" className="hover:text-white transition">
+                  Terms of Service
+                </a>
+                <a href="#cookies" className="hover:text-white transition">
+                  Cookie Settings
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Back-to-top (optional) */}
+        <a
+          href="#top"
+          className="hidden md:flex items-center justify-center rounded-full h-10 w-10 bg-primary text-white shadow-lg ring-2 ring-white/20 hover:translate-y-[-2px] transition fixed bottom-6 right-6"
+          aria-label="Back to top"
+          title="Back to top"
+        >
+          ↑
+        </a>
+      </footer>
     </div>
   );
 };

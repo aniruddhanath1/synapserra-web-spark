@@ -144,7 +144,6 @@
 
 // export default Contact;
 
-
 import { useState, FormEvent } from "react";
 import { Send, MapPin } from "lucide-react";
 
@@ -176,7 +175,7 @@ export default function Contact() {
   return (
     <section id="contact" className="bg-background">
       <div className="max-w-6xl mx-auto px-6 pt-12">
-        <h1 className="text-4xl md:text-5xl font-extrabold text-foreground text-center bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent" >
+        <h1 className="text-4xl md:text-5xl font-extrabold text-foreground text-center bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
           Contact Us
         </h1>
         <p className="text-center text-muted-foreground mt-2 mb-8">
@@ -190,7 +189,11 @@ export default function Contact() {
               key={loc.name}
               onClick={() => setSelected(i)}
               className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm border transition
-                ${selected === i ? "bg-primary text-white border-primary" : "bg-card text-foreground border-border hover:bg-primary/10"}`}
+                ${
+                  selected === i
+                    ? "bg-primary text-white border-primary"
+                    : "bg-card text-foreground border-border hover:bg-primary/10"
+                }`}
             >
               <MapPin className="h-4 w-4" />
               {loc.name}
@@ -217,9 +220,12 @@ export default function Contact() {
           <div className="relative rounded-2xl border border-border/50 shadow-sm overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-accent/10 to-transparent" />
             <div className="relative p-6 md:p-8 bg-white/70 dark:bg-white">
-              <h2 className="text-2xl font-bold text-gray-900 mb-2">Project Inquiry</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                Project Inquiry
+              </h2>
               <p className="text-gray-700 mb-6">
-                Share a few details and our team will respond within one business day.
+                Share a few details and our team will respond within one
+                business day.
               </p>
 
               <form onSubmit={onSubmit} className="space-y-4">
@@ -275,14 +281,54 @@ export default function Contact() {
                   {sending ? "Sending…" : "Send Message"}
                 </button>
               </form>
+              <div className="h-[55px]" />
+              <section className="mt-10 rounded-2xl border border-border/60 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-900 dark:to-slate-950 p-6 shadow-sm">
+                <h3 className="text-xl font-bold text-foreground mb-4">
+                  Why Choose{" "}
+                  <span className="text-blue-600 dark:text-blue-400">Us</span>?
+                </h3>
+
+                <ul className="space-y-2 text-sm">
+                  <li className="flex items-center gap-2">
+                    <span className="text-blue-600">✔</span> 8+ years of
+                    industry experience
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-blue-600">✔</span> Trusted by global
+                    brands
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-blue-600">✔</span> Transparent pricing
+                    & timelines
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-blue-600">✔</span> Dedicated
+                    post-project support
+                  </li>
+                </ul>
+
+                <div className="mt-4 text-sm text-muted-foreground">
+                  Need help right away? <br />
+                  <a
+                    href="mailto:info@synapserra.com"
+                    className="text-blue-600 hover:underline"
+                  >
+                    info@synapserra.com
+                  </a>{" "}
+                  |{" "}
+                  <a
+                    href="tel:+918004539892"
+                    className="text-blue-600 hover:underline"
+                  >
+                    +91 80045 39892
+                  </a>
+                </div>
+              </section>
             </div>
           </div>
 
-
-
-
           {/* Mini map – hidden on small screens, shows on md+ */}
-          <div className="hidden md:block rounded-2xl overflow-hidden border border-border/50 shadow-sm">
+          {/* <div className="hidden md:block rounded-2xl overflow-hidden border border-border/50 shadow-sm">
             <div className="px-6 pt-6">
               <h3 className="text-xl font-bold text-foreground">{locations[selected].name}</h3>
               <p className="text-muted-foreground mt-1 mb-4">{locations[selected].address}</p>
@@ -297,9 +343,66 @@ export default function Contact() {
               allowFullScreen
               referrerPolicy="no-referrer-when-downgrade"
             />
-          </div>
+          </div> */}
+          <section className="py-16 bg-gradient-to-br from-background to-secondary/20">
+            <div className="max-w-5xl mx-auto px-6">
+              {/* FAQ Header */}
+              <h2
+                className="text-3xl font-bold text-center mb-10 
+      bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent"
+              >
+                Frequently Asked Questions
+              </h2>
 
-          
+              {/* FAQ Items */}
+              <div className="space-y-6">
+                {[
+                  {
+                    q: "How soon will I get a response?",
+                    a: "We usually reply within 24 hours on business days.",
+                  },
+                  {
+                    q: "Do you work with startups as well as enterprises?",
+                    a: "Yes, our solutions scale from early-stage ventures to global enterprises.",
+                  },
+                  {
+                    q: "What industries do you specialize in?",
+                    a: "Finance, manufacturing, SaaS, and consumer products are our core industries.",
+                  },
+                  {
+                    q: "Can you provide project cost estimates?",
+                    a: "Absolutely — after consultation, we share transparent proposals with timelines and costs.",
+                  },
+                ].map((faq, i) => (
+                  <div
+                    key={i}
+                    className="border border-border/50 rounded-xl p-5 hover:shadow-md transition bg-card/50"
+                  >
+                    <h3 className="font-semibold text-foreground">{faq.q}</h3>
+                    <p className="text-muted-foreground mt-2">{faq.a}</p>
+                  </div>
+                ))}
+              </div>
+
+              {/* CTA Panel Below FAQ */}
+              <div className="mt-16 text-center">
+                <div className="rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-500 p-10 shadow-lg text-white">
+                  <h3 className="text-2xl md:text-3xl font-bold">
+                    Still have questions?
+                  </h3>
+                  <p className="mt-2 text-white/90 max-w-2xl mx-auto">
+                    Let’s discuss your project and clear all your doubts in a
+                    free consultation call.
+                  </p>
+                  <a href="#get-quote">
+                    <button className="mt-6 px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg shadow hover:bg-gray-100 transition">
+                      Talk to an Expert
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
     </section>
