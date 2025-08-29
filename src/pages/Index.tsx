@@ -105,9 +105,9 @@ const Index = () => {
           {/* Logo */}
           <div className="flex items-center gap-3">
             <img
-              src="/synapserra-web-spark/lovable-uploads/93703c00-d56c-4f8a-a80e-651da5c94058.png"
+              src="/synapserra-web-spark/lovable-uploads/synap_logo.png"
               alt="Synapserra Logo"
-              className="h-20 w-auto  object-contain "
+              className="h-8 w-auto  object-contain "
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             />
           </div>
@@ -535,13 +535,13 @@ const Index = () => {
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <img
-                    src="/synapserra-web-spark/lovable-uploads/93703c00-d56c-4f8a-a80e-651da5c94058.png"
+                    src="/synapserra-web-spark/lovable-uploads/synap_logo.png"
                     alt="Synapserra"
-                    className="h-20 w-auto rounded-lg ring-1 ring-white/10 bg-white/5 p-1"
+                    className="h-11 w-auto rounded-lg ring-1 ring-white/10 bg-white/5 p-1"
                   />
-                  <span className="text-xl font-semibold tracking-tight">
+                  {/* <span className="text-xl font-semibold tracking-tight">
                     Synapserra
-                  </span>
+                  </span> */}
                 </div>
                 <p className="text-sm text-white/70 leading-relaxed">
                   Scalable IT services across web, cloud, and CRM—engineered for
